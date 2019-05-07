@@ -6,12 +6,13 @@ public class LeapYear {
     public static final int FOUR = 4;
     public static final int HUNDRED = 100;
     public static final int FOUR_HUNDRED = 400;
+    public static final int FOUR_THOUSAND = 4000;
 
     public boolean isLeapYear(int year){
         if(year< GREGORIAN_CALENDAR_INTRODUCED_YEAR){
             return false;
         }else
-            return (isMultipleOf400(year) || (isMultipleOf4(year) && !isMultipleOf100(year)));
+            return ((isMultipleOf400(year) && !isMultipleOf4000(year)) || (isMultipleOf4(year) && !isMultipleOf100(year) && !isMultipleOf4000(year)));
     }
 
     private boolean isMultipleOf4(int year) {
@@ -24,5 +25,9 @@ public class LeapYear {
 
     private boolean isMultipleOf400(int year) {
         return year%FOUR_HUNDRED == 0;
+    }
+
+    private boolean isMultipleOf4000(int year) {
+        return year%FOUR_THOUSAND == 0;
     }
 }

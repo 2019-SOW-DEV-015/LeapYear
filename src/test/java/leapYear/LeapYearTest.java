@@ -50,4 +50,9 @@ public class LeapYearTest {
     public void test_isLeapYear_forInvalidYearLike0_shouldReturnFalse(){
         assertFalse(isLeapYear(0));
     }
+
+    @Test
+    public void test_isLeapYear_whenDivisibleBy4000_shouldReturnFalse(){
+        assertFalse(isLeapYear(16000));
+    }
 }
