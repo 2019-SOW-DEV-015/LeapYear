@@ -12,24 +12,22 @@ public class LeapYearTest {
         leapYear = new LeapYear();
     }
 
+    private boolean isLeapYear(int year) {
+        return leapYear.isLeapYear(year);
+    }
+
     @Test
     public void test_isLeapYear_whenDivisibleBy400_shouldReturnTrue(){
-        boolean isLeap = leapYear.isLeapYear(2000);
-
-        assertTrue(isLeap);
+        assertTrue(isLeapYear(2000));
     }
 
     @Test
     public void test_isLeapYear_whenDivisibleBy100ButNotBy400_shouldReturnFalse(){
-        boolean isLeap = leapYear.isLeapYear(2100);
-
-        assertFalse(isLeap);
+        assertFalse(isLeapYear(2100));
     }
 
     @Test
     public void test_isLeapYear_whenDivisibleBy4ButNotBy100_shouldReturnTrue(){
-        boolean isLeap = leapYear.isLeapYear(2008);
-
-        assertTrue(isLeap);
+        assertTrue(isLeapYear(2008));
     }
 }
