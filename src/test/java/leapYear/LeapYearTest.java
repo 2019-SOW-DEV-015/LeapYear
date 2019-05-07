@@ -40,4 +40,9 @@ public class LeapYearTest {
     public void test_isLeapYear_forInvalidYearLikeNegativeNumber_shouldReturnFalse(){
         assertFalse(isLeapYear(-1));
     }
+
+    @Test
+    public void test_isLeapYear_forYearBeforeGregorianCalendar1582_shouldReturnFalse(){
+        assertFalse(isLeapYear(1580));
+    }
 }
