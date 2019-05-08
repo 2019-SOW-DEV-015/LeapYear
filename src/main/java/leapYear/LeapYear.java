@@ -1,7 +1,6 @@
 package leapYear;
 
 public class LeapYear {
-
     public static final int GREGORIAN_CALENDAR_INTRODUCED_YEAR = 1582;
     public static final int FOUR = 4;
     public static final int HUNDRED = 100;
@@ -9,9 +8,9 @@ public class LeapYear {
     public static final int FOUR_THOUSAND = 4000;
 
     public boolean isLeapYear(int year){
-        if(year< GREGORIAN_CALENDAR_INTRODUCED_YEAR){
+        if(year< GREGORIAN_CALENDAR_INTRODUCED_YEAR)
             return false;
-        }else
+        else
             return ((isMultipleOf400(year) && !isMultipleOf4000(year)) || (isMultipleOf4(year) && !isMultipleOf100(year) && !isMultipleOf4000(year)));
     }
 
