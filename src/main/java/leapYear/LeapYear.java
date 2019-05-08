@@ -11,22 +11,22 @@ public class LeapYear {
         if(year< GREGORIAN_CALENDAR_INTRODUCED_YEAR)
             return false;
         else
-            return ((isMultipleOf400(year) && !isMultipleOf4000(year)) || (isMultipleOf4(year) && !isMultipleOf100(year) && !isMultipleOf4000(year)));
+            return ((isMultipleOf400(year) && isNotMultipleOf4000(year)) || (isMultipleOf4(year) && isNotMultipleOf100(year) && isNotMultipleOf4000(year)));
     }
 
     private boolean isMultipleOf4(int year) {
         return year%FOUR == 0;
     }
 
-    private boolean isMultipleOf100(int year) {
-        return year%HUNDRED == 0;
+    private boolean isNotMultipleOf100(int year) {
+        return year%HUNDRED != 0;
     }
 
     private boolean isMultipleOf400(int year) {
         return year%FOUR_HUNDRED == 0;
     }
 
-    private boolean isMultipleOf4000(int year) {
-        return year%FOUR_THOUSAND == 0;
+    private boolean isNotMultipleOf4000(int year) {
+        return year%FOUR_THOUSAND != 0;
     }
 }
