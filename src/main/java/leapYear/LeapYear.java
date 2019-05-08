@@ -1,11 +1,11 @@
 package leapYear;
 
 public class LeapYear {
-    public static final int GREGORIAN_CALENDAR_INTRODUCED_YEAR = 1582;
-    public static final int FOUR = 4;
-    public static final int HUNDRED = 100;
-    public static final int FOUR_HUNDRED = 400;
-    public static final int FOUR_THOUSAND = 4000;
+    private static final int GREGORIAN_CALENDAR_INTRODUCED_YEAR = 1582;
+    private static final int FOUR = 4;
+    private static final int HUNDRED = 100;
+    private static final int FOUR_HUNDRED = 400;
+    private static final int FOUR_THOUSAND = 4000;
 
     public boolean isLeapYear(int year){
         if(year< GREGORIAN_CALENDAR_INTRODUCED_YEAR)
